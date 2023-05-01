@@ -1,0 +1,42 @@
+/* Write your CSS here */
+
+.history-container {
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+  padding-left: 20px;
+  margin-top: 0px;
+  border-top: none;
+  border-left-color: #d7dfe9;
+  border-right-color: #d7dfe9;
+  border-bottom-color: #d7dfe9;
+  border-width: 1px;
+}
+.header {
+  color: #1e293b;
+  font-size: 16px;
+  width: 50%;
+  flex-grow: 1;
+}
+.type {
+  flex-grow: 1;
+  padding-left: 0px;
+  margin-right: 10px;
+  width: 100px;
+}
+.delete-container {
+  display: flex;
+  justify-content: space-between;
+  border: none;
+  background-color: transparent;
+
+  flex-grow: 1;
+}
+.button {
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+}
+.delete {
+  width: 30px;
+}

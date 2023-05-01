@@ -1,0 +1,66 @@
+/* Write your CSS here */
+
+.image {
+  width: 60px;
+  height: 70px;
+  align-self: center;
+  margin-right: 30px;
+}
+.img-balance-container {
+  background-color: #ecfccb;
+  border: 1px solid #84cc16;
+  border-radius: 8px;
+  margin-right: 20px;
+  margin-top: 20px;
+  display: flex;
+  padding: 20px;
+  flex-grow: 1;
+}
+.balance-cont {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+.img-income-container {
+  background-color: #cffafe;
+  border: 1px solid #06b6d4;
+  border-radius: 8px;
+  margin-right: 20px;
+  display: flex;
+  margin-top: 20px;
+  padding: 20px;
+  flex-grow: 1;
+}
+
+.img-expenses-container {
+  background-color: #ede9fe;
+  border: 1px solid #7c3aed;
+  border-radius: 8px;
+  margin-top: 20px;
+  margin-right: 20px;
+  display: flex;
+  padding: 20px;
+  flex-grow: 1;
+}
+.balance {
+  color: #334155;
+  font-size: 14px;
+}
+.amount {
+  color: #1e293b;
+  font-size: 18px;
+  font-weight: 500;
+}
+@media (min-width: 768px) {
+  .image {
+    align-self: center;
+    width: 90px;
+    height: 90px;
+  }
+  .balance {
+    font-size: 18px;
+  }
+  .amount {
+    font-size: 26px;
+  }
+}
