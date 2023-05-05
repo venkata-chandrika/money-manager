@@ -11,9 +11,9 @@ const TransactionItem = props => {
   }
   return (
     <li className="header-container">
-      <p className="header">{title}</p>
+      <p className="header">Rs {title}</p>
 
-      <p className="header">{amount}</p>
+      <p className="header">Rs {amount}</p>
       <div className="delete-container">
         <p className="header type">{type}</p>
         <button type="button" className="button" onClick={deleteHistory}>

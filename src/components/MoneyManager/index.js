@@ -89,8 +89,12 @@ class MoneyManager extends Component {
   }
 
   render() {
-    const {transactionLists} = this.state
+    const {title, amount, transactionLists} = this.state
+    const incomeAmount = this.incomeAmount()
+    const expenseAmount = this.expenseAmount()
 
+    const totalAmount = incomeAmount - expenseAmount
+    console.log(incomeAmount, expenseAmount, totalAmount)
     return (
       <div className="app-container">
         <div className="money-container">
@@ -102,8 +106,9 @@ class MoneyManager extends Component {
           </div>
 
           <MoneyDetails
-            incomeAmount={this.incomeAmount}
-            expenseAmount={this.expenseAmount}
+            incomeAmount={incomeAmount}
+            expenseAmount={expenseAmount}
+            totalAmount={totalAmount}
           />
 
           <div className="bottom-container">
@@ -120,6 +125,7 @@ class MoneyManager extends Component {
                   placeholder="TITLE"
                   className="input"
                   onChange={this.inputTitle}
+                  value={title}
                 />
                 <label htmlFor="inputAmount" className="label">
                   AMOUNT
@@ -131,21 +137,23 @@ class MoneyManager extends Component {
                   placeholder="AMOUNT"
                   className="input"
                   onChange={this.inputAmount}
+                  value={amount}
                 />
                 <label htmlFor="inputType" className="label">
                   TYPE
                 </label>
                 <br />
-                <select className="input" onChange={this.selectedOption}>
-                  {transactionTypeOptions.map(each => (
-                    <option
-                      key={each.optionId}
-                      value={each.displayText}
-                      defaultValue
-                    >
-                      {each.displayText}
-                    </option>
-                  ))}
+                <select
+                  className="input"
+                  onChange={this.selectedOption}
+                  id="inputType"
+                >
+                  <option key="INCOME" value="Income" defaultValue>
+                    Income
+                  </option>
+                  <option key="EXPENSES" value="Expenses">
+                    Expenses
+                  </option>
                 </select>
                 <button
                   type="submit"
